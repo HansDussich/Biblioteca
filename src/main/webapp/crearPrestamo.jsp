@@ -11,26 +11,58 @@
     List<Usuario> usuarios = cu.traerUsuarios();
 %>
 <html>
-<head><title>Solicitar Préstamo</title></head>
+<head>
+    <title>Nombre de la Página</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
 <body>
-<h1>Solicitar Préstamo</h1>
-<form method="post" action="PrestamoServlet">
-    <label>Usuario:</label><br>
-    <select name="usuario">
-        <% for (Usuario u : usuarios) { %>
-            <option value="<%= u.getId() %>"><%= u.getNombre() %></option>
-        <% } %>
-    </select><br><br>
+<div class="container mt-5">
+    <h1 class="mb-4">Agregar Nuevo Libro</h1>
 
-    <label>Libro:</label><br>
-    <select name="libro">
-        <% for (Libro l : libros) {
-            if (l.isDisponibilidad()) { %>
-            <option value="<%= l.getId() %>"><%= l.getTitulo() %></option>
-        <% } } %>
-    </select><br><br>
+    <form action="LibroServlet" method="post" class="row g-3">
+        <input type="hidden" name="accion" value="crear"/>
 
-    <input type="submit" value="Solicitar Préstamo">
-</form>
+        <div class="col-md-6">
+            <label class="form-label">Título:</label>
+            <input type="text" class="form-control" name="titulo" required>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Autor:</label>
+            <input type="text" class="form-control" name="autor" required>
+        </div>
+
+        <div class="col-md-4">
+            <label class="form-label">Año:</label>
+            <input type="number" class="form-control" name="anio" required>
+        </div>
+
+        <div class="col-md-4">
+            <label class="form-label">ISBN:</label>
+            <input type="text" class="form-control" name="isbn" required>
+        </div>
+
+        <div class="col-md-4">
+            <label class="form-label">Género:</label>
+            <input type="text" class="form-control" name="genero" required>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Disponible:</label><br>
+            <input type="hidden" name="disponibilidad" value="false"/>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" name="disponibilidad" value="true">
+                <label class="form-check-label">Sí</label>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Guardar Libro</button>
+            <a href="LibroServlet?accion=listar" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+
 </body>
 </html>
