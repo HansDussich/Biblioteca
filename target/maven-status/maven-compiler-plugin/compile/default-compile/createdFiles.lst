@@ -1,0 +1,14 @@
+com\mycompany\gestionbiblioteca\Entity\Libro.class
+com\mycompany\gestionbiblioteca\JPAController\exceptions\NonexistentEntityException.class
+com\mycompany\gestionbiblioteca\Servlet\LibroServlet.class
+com\mycompany\gestionbiblioteca\JPAController\PrestamoJpaController.class
+com\mycompany\gestionbiblioteca\JPAController\exceptions\IllegalOrphanException.class
+com\mycompany\gestionbiblioteca\Servlet\UsuarioServlet.class
+com\mycompany\gestionbiblioteca\Controller\ContPrestamo.class
+com\mycompany\gestionbiblioteca\Entity\Usuario.class
+com\mycompany\gestionbiblioteca\Controller\ContUsuario.class
+com\mycompany\gestionbiblioteca\Entity\Prestamo.class
+com\mycompany\gestionbiblioteca\JPAController\exceptions\PreexistingEntityException.class
+com\mycompany\gestionbiblioteca\Controller\ContLibro.class
+com\mycompany\gestionbiblioteca\JPAController\LibroJpaController.class
+com\mycompany\gestionbiblioteca\JPAController\UsuarioJpaController.class
