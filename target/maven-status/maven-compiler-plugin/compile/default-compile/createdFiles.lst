@@ -9,6 +9,7 @@ com\mycompany\gestionbiblioteca\Entity\Usuario.class
 com\mycompany\gestionbiblioteca\Controller\ContUsuario.class
 com\mycompany\gestionbiblioteca\Entity\Prestamo.class
 com\mycompany\gestionbiblioteca\JPAController\exceptions\PreexistingEntityException.class
+com\mycompany\gestionbiblioteca\Servlet\PrestamoServlet.class
 com\mycompany\gestionbiblioteca\Controller\ContLibro.class
 com\mycompany\gestionbiblioteca\JPAController\LibroJpaController.class
 com\mycompany\gestionbiblioteca\JPAController\UsuarioJpaController.class

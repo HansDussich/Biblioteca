@@ -8,7 +8,7 @@
     <p>Acciones disponibles para ti:</p>
     <ul>
         <li><a href="verUsuarios.jsp">Ver Usuarios</a></li>
-        <li><a href="editarPerfil.jsp">Editar perfil</a></li>
+        <li><a href="perfil.jsp">Perfil</a></li>
         <li><a href="UsuarioServlet?action=logout">Cerrar sesión</a></li>
     </ul>
 </body>
